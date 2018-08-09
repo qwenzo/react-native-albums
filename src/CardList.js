@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View , Text , Image} from 'react-native';
+import {View , Text , Image , Linking} from 'react-native';
 import axios from 'axios';
 import Card from './Card';
 import CardSection from './CardSection';
@@ -37,7 +37,11 @@ class CardList extends Component {
                        <Image style={styles.albumImageStyle} source={{uri:details.image}}/>
                        </CardSection>
                        <CardSection>
-                        <Button text='BUY NOW!' />
+                        <Button text='BUY NOW!' onClickHandle={
+                            ()=>{
+                                Linking.openURL(details.url);
+                            }
+                        }/>
                        </CardSection>
                     </Card>
                   )
