@@ -26,11 +26,14 @@ class CardList extends Component {
                   return (
                     <Card key={details.title} details={details}>
                        <CardSection>
-                        <Image style={styles.imageStyle} source={{uri:details.thumbnail_image}}/>
-                        <Text>{details.title}</Text>
+                            <Image style={styles.imageStyle} source={{uri:details.thumbnail_image}}/>
+                            <View style={styles.textContainerStyle} >
+                            <Text style={styles.titleStyle}>{details.title}</Text>
+                            <Text style={styles.artistStyle}>{details.artist}</Text>
+                        </View>
                        </CardSection>
                        <CardSection>
-                       <Text>{details.title}</Text>
+                       <Image style={styles.albumImageStyle} source={{uri:details.image}}/>
                        </CardSection>
                     </Card>
                   )
@@ -45,6 +48,21 @@ const styles={
     imageStyle:{
         width:50
         ,height:50
+    },
+    titleStyle:{
+        fontSize:15
+    },
+    artistStyle:{
+        
+    },
+    textContainerStyle:{
+        flexDirection: 'column',
+        marginLeft:5
+    },
+    albumImageStyle:{
+        width:null,
+        height:300,
+        flex:1
     }
 }
 

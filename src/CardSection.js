@@ -16,7 +16,7 @@ const styles={
         borderBottomColor: '#ddd',
         flexDirection: 'row',
         alignItems: 'flex-start',
-        padding:5
+        padding:3
     }
 }
 
