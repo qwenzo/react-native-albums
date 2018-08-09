@@ -18,7 +18,9 @@ import axios from 'axios';
             marginLeft:5,
             marginRight:5,
             borderRadius: 1,
-            paddingLeft:5
+            borderWidth:1,
+            borderColor:'#ddd',
+            borderBottomWidth: 0,
         }
     }
 

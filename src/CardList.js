@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
-import {View , Text} from 'react-native';
+import {View , Text , Image} from 'react-native';
 import axios from 'axios';
-import Card from './Card'
+import Card from './Card';
+import CardSection from './CardSection'
 
 class CardList extends Component {
     state = {
@@ -24,13 +25,26 @@ class CardList extends Component {
                    (details) =>{
                   return (
                     <Card key={details.title} details={details}>
-                        <Text>test</Text>
+                       <CardSection>
+                        <Image style={styles.imageStyle} source={{uri:details.thumbnail_image}}/>
+                        <Text>{details.title}</Text>
+                       </CardSection>
+                       <CardSection>
+                       <Text>{details.title}</Text>
+                       </CardSection>
                     </Card>
                   )
                    }
                ) }
             </View>
         )
+    }
+}
+
+const styles={
+    imageStyle:{
+        width:50
+        ,height:50
     }
 }
 
