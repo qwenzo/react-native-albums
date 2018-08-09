@@ -22,7 +22,11 @@ class CardList extends Component {
             <View>
                { this.state.albums.map( 
                    (details) =>{
-                  return  <Card key={details.title} details={details}/>
+                  return (
+                    <Card key={details.title} details={details}>
+                        <Text>test</Text>
+                    </Card>
+                  )
                    }
                ) }
             </View>
