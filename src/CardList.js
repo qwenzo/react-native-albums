@@ -2,7 +2,8 @@ import React,{Component} from 'react';
 import {View , Text , Image} from 'react-native';
 import axios from 'axios';
 import Card from './Card';
-import CardSection from './CardSection'
+import CardSection from './CardSection';
+import Button from './Button';
 
 class CardList extends Component {
     state = {
@@ -35,6 +36,9 @@ class CardList extends Component {
                        <CardSection>
                        <Image style={styles.albumImageStyle} source={{uri:details.image}}/>
                        </CardSection>
+                       <CardSection>
+                        <Button text='BUY NOW!' />
+                       </CardSection>
                     </Card>
                   )
                    }
@@ -61,7 +65,7 @@ const styles={
     },
     albumImageStyle:{
         width:null,
-        height:300,
+        height:350,
         flex:1
     }
 }
